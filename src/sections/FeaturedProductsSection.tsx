@@ -1,6 +1,8 @@
 import React from "react";
 import ProductCard from "@/components/ProductCard";
 
+
+
 export default function FeaturedProductsSection() {
   return (
     <section className="flex flex-col my-50 mx-auto items-center justify-between gap-9 w-full px-48">

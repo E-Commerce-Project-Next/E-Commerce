@@ -1,28 +1,26 @@
 import HeroSection from "@/sections/HeroSection";
-import ProductCard from "@/components/ProductCard";
 import FeaturedProductsSection from "@/sections/FeaturedProductsSection";
 import LatestOngoingsSection from "@/sections/LatestOngoingsSection";
 import PopularProductsSection from "@/sections/PopularProductsSection";
 import ValuePropositionSection from "@/sections/ValuePropositionSection";
 import FaqSection from "@/sections/FaqSection";
+import {getPopularProducts} from "@/services/ProductService";
 
-export default function Home() {
+export default async function Home() {
+
+const popularProducts = await getPopularProducts();
+
   return (
     <>
       <HeroSection/> 
-      <ProductCard
-        title="Sample Product"
-        price={100}
-        discount={10}
-      />
       <br />
       <br />
       <br />
-      <PopularProductsSection/>
+      <PopularProductsSection popularProducts={popularProducts} />
       <br />
       <br />
       <br />
-      <FeaturedProductsSection/>
+      <FeaturedProductsSection />
       <br/>
       <br />
       <br/>
