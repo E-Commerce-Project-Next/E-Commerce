@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ValueProposition() {
   return (
-    <div className="flex flex-col gap-10 text-black/80 text-xl  max-w-2xl">
+    <div className="flex flex-col gap-10 text-black/80 text-xl  max-w-xl">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros elementum tristique. Duis cursus, mi quis viverra

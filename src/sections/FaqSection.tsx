@@ -1,4 +1,4 @@
-import Faqs from "@/components/Faqs";
+import Faqs from "@/components/sections/Faqs";
 import TwoColumnsSection from "@/layouts/TwoColumnsSection";
 import React from "react";
 

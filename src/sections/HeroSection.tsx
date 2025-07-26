@@ -1,10 +1,10 @@
 import React from "react";
-import SearchInput from "@/components/SearchInput";
+import SearchInput from "@/components/ui/SearchInput";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col my-50 mx-100 items-center justify-center gap-10 text-center">
-      <h1 className="text-4xl font-bold text-black">
+    <section className="flex flex-col py-40 px-[5rem] items-center justify-center gap-10 text-center">
+      <h1 className="text-4xl font-bold text-black max-w-2xl">
         Crafting Comfort, Redefining Spaces. Your Home, Your Signature Style!
       </h1>
       <p className="text-lg text-gray-700 max-w-2xl">

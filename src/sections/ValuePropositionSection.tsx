@@ -1,4 +1,4 @@
-import ValueProposition from "@/components/ValueProposition";
+import ValueProposition from "@/components/sections/ValueProposition";
 import TwoColumnsSection from "@/layouts/TwoColumnsSection";
 import React from "react";
 

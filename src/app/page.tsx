@@ -4,15 +4,14 @@ import LatestOngoingsSection from "@/sections/LatestOngoingsSection";
 import PopularProductsSection from "@/sections/PopularProductsSection";
 import ValuePropositionSection from "@/sections/ValuePropositionSection";
 import FaqSection from "@/sections/FaqSection";
-import {getPopularProducts} from "@/services/ProductService";
+import { getPopularProducts } from "@/services/ProductService";
 
 export default async function Home() {
-
-const popularProducts = await getPopularProducts();
+  const popularProducts = await getPopularProducts();
 
   return (
     <>
-      <HeroSection/> 
+      <HeroSection />
       <br />
       <br />
       <br />
@@ -20,19 +19,22 @@ const popularProducts = await getPopularProducts();
       <br />
       <br />
       <br />
-      <FeaturedProductsSection />
-      <br/>
+      <FeaturedProductsSection featuredProducts={[]}/>
       <br />
-      <br/>
-      <ValuePropositionSection/>
-      <br/>
-      <br/>
-      <br/>
-      <LatestOngoingsSection/>
-      <br/>
-      <br/>
-      <br/>
-      <FaqSection/>
+      <br />
+      <br />
+      <ValuePropositionSection />
+      <br />
+      <br />
+      <br />
+      <LatestOngoingsSection array={[]}/>
+      <br />
+      <br />
+      <br />
+      <FaqSection />
+      <br />
+      <br />
+      <br />
     </>
   );
 }

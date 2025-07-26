@@ -1,9 +1,17 @@
 import React from "react";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/products/ProductCard";
+import { Product } from "@/types/productType";
+import NotFoundProducts from "@/components/products/NotFoundProducts";
 
+interface FeaturedProductsSectionProps {
+  featuredProducts: Product[];
+}
 
+export default function FeaturedProductsSection({
+  featuredProducts,
+}: FeaturedProductsSectionProps) {
+  const hasFeaturedProducts = featuredProducts?.length > 0 && featuredProducts;
 
-export default function FeaturedProductsSection() {
   return (
     <section className="flex flex-col my-50 mx-auto items-center justify-between gap-9 w-full px-48">
       <div className="flex justify-between w-full gap-8">
@@ -14,12 +22,22 @@ export default function FeaturedProductsSection() {
           pulvina.
         </p>
       </div>
-      <div className="flex w-full lg:justify-between justify-center gap-4 flex-wrap">
-        <ProductCard title="Sample Product" price={100} discount={10} />
-        <ProductCard title="Sample Product" price={100} discount={10} />
-        <ProductCard title="Sample Product" price={100} discount={10} />
-        <ProductCard title="Sample Product" price={100} discount={10} />
-      </div>
+        {hasFeaturedProducts ? (
+          <div className="flex w-full lg:justify-between justify-center gap-4 flex-wrap">
+            {featuredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                title={product.name}
+                price={product.price}
+                discount={product.discountValue}
+                imageUrl={product.images[0]?.url}
+                altText={product.images[0]?.altText || "Product Image"}
+              />
+            ))}
+          </div>
+        ) : (
+          <NotFoundProducts />
+        )}
     </section>
   );
 }
