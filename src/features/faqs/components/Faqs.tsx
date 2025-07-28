@@ -1,42 +1,23 @@
 import React from "react";
+import {
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 type FaqsProps = {
-  question: string,
-  answer: string
-}
+  question: string;
+  answer: string;
+  numItem: number;
+};
 
-export default function Faqs({ question, answer}: FaqsProps) {
+export default function Faqs({ question, answer, numItem }: FaqsProps) {
   return (
-    <div className="flex-1 pl-20">
-      <details
-        className="group [&_summary::-webkit-details-marker]:hidden"
-        open
-      >
-        <summary className="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900">
-          <h2 className="text-lg font-medium">
-            {question}
-          </h2>
-
-          <svg
-            className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </summary>
-
-        <p className="px-4 pt-4 text-gray-900">
-          {answer}
-        </p>
-      </details>
-    </div>
+    <AccordionItem value={`item-${numItem}`}>
+      <AccordionTrigger className="text-xl">{question}</AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4">
+        <p>{answer}</p>
+      </AccordionContent>
+    </AccordionItem>
   );
 }

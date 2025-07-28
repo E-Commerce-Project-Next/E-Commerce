@@ -34,7 +34,7 @@ export default function DropdownMenu({ items, buttonContent }: DropdownMenuProps
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-4 py-2 rounded-3xl fill-current hover:bg-black hover:text-white flex gap-2 items-center text-black transition-colors"
+        className="px-4 py-2 rounded-3xl fill-current hover:bg-black hover:cursor-pointer hover:text-white flex gap-2 items-center text-black transition-colors"
         aria-haspopup="true"
         aria-expanded={isOpen}
       >

@@ -26,8 +26,8 @@ export default function CategorySection() {
   ];
 
   return (
-  
-    <section className="flex flex-col items-center gap-5 p-10">
+
+    <section id="categories" className="flex flex-col items-center gap-5 p-10 pt-25">
       <h2 className="text-4xl font-bold">View Our Range Of Categories</h2>
       <p className=" text-gray-600 text-l max-w-2xl text-center">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam

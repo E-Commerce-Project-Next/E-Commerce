@@ -6,12 +6,13 @@ type TwoColumnsSectionProps = {
     buttonText: string;
     description?: string;
     children: React.ReactNode;
+    sectionId: string;
 };
 
 
-export default function TwoColumnsSection({ title, buttonText, description, children }: TwoColumnsSectionProps) {
+export default function TwoColumnsSection({ title, buttonText, description, children, sectionId }: TwoColumnsSectionProps) {
   return (
-    <section className="flex justify-between mx-auto w-full gap-5">
+    <section id={sectionId} className="flex justify-between mx-auto w-full gap-5 pt-30">
           <LeftSectionIntro
             title={title}
             buttonText={buttonText}

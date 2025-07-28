@@ -14,11 +14,12 @@ export default function PopularProductsSection({
   const hasPopularProducts = popularProducts?.length > 0 && popularProducts;
 
   return (
-    <section className="flex flex-col justify-center gap-9 w-full">
+    <section id="popular-products" className="flex flex-col justify-center gap-9 w-full pt-25">
       <SectionIntro
         title="Most Popular Products"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat. Nunc auctor consectetur elit, quis pulvina."
         buttonText="View All"
+        buttonLink="/products"
       />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] justify-center justify-items-center gap-y-5 gap-x-25">
         {hasPopularProducts ? (

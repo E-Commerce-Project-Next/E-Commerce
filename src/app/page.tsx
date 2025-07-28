@@ -1,6 +1,6 @@
 import HeroSection from "@/features/commons/sections/HeroSection";
 import FeaturedProductsSection from "@/features/products/sections/FeaturedProductsSection";
-import LatestOngoingsSection from "@/features/commons/sections/LatestOngoingsSection";
+import LatestOngoingsSection from "@/features/blogs/sections/LatestOngoingsSection";
 import PopularProductsSection from "@/features/products/sections/PopularProductsSection";
 import ValuePropositionSection from "@/features/commons/sections/ValuePropositionSection";
 import FaqSection from "@/features/faqs/sections/FaqSection";

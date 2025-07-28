@@ -7,6 +7,7 @@ export default function ValuePropositionSection() {
     <TwoColumnsSection
       title="Have a Look at Our Unique Selling Proportions"
       buttonText="Read More"
+      sectionId="value-proposition"
     >
       <ValueProposition />
     </TwoColumnsSection>

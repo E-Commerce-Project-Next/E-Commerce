@@ -5,9 +5,10 @@ type SectionIntroProps = {
     title: string;
     description: string;
     buttonText: string;
+    buttonLink?: string;
 };
 
-export default function SectionIntro({ title, description, buttonText }: SectionIntroProps) {
+export default function SectionIntro({ title, description, buttonText, buttonLink }: SectionIntroProps) {
   return (
     <div className="flex justify-between items-center w-full ">
       <div className="flex flex-col gap-4">
@@ -15,7 +16,7 @@ export default function SectionIntro({ title, description, buttonText }: Section
         <p className="text-lg text-black/70 max-w-2xl">{description}</p>
       </div>
       <div>
-        <Button>{buttonText}</Button>
+        <Button link={buttonLink}>{buttonText}</Button>
       </div>
     </div>
   );
