@@ -12,7 +12,7 @@ type TwoColumnsSectionProps = {
 
 export default function TwoColumnsSection({ title, buttonText, description, children, sectionId }: TwoColumnsSectionProps) {
   return (
-    <section id={sectionId} className="flex justify-between mx-auto w-full gap-5 pt-30">
+    <section id={sectionId} className="flex justify-between mx-auto w-full gap-5">
           <LeftSectionIntro
             title={title}
             buttonText={buttonText}

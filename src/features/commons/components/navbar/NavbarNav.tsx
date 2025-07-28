@@ -182,7 +182,7 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/contact-us">Contact Us</Link>
+            <Link href="/aboutUs">About us</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
