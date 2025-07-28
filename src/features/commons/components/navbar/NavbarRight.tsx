@@ -13,7 +13,7 @@ interface NavbarRightProps {
   isLoggedIn?: boolean;
 }
 
-export default function NavbarRight({ isLoggedIn = true }: NavbarRightProps) {
+export default function NavbarRight({ isLoggedIn = false }: NavbarRightProps) {
   return (
     <div className="flex items-center justify-center gap-4">
       <NavigationMenuItem className="">
@@ -61,9 +61,9 @@ export default function NavbarRight({ isLoggedIn = true }: NavbarRightProps) {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
+                  <Link href="/signup" className="flex-row items-center gap-2">
                     <PyramidIcon color="black"/>
-                    Sing Up
+                    Sign Up
                   </Link>
                 </NavigationMenuLink>
               </li>
