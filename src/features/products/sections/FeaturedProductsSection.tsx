@@ -13,7 +13,7 @@ export default function FeaturedProductsSection({
   const hasFeaturedProducts = featuredProducts?.length > 0 && featuredProducts;
 
   return (
-    <section id="featured-products" className="flex flex-col mx-auto items-center justify-center gap-9 w-full pt-25">
+    <section id="featured-products" className="flex flex-col mx-auto items-center justify-center gap-9 w-full scroll-mt-30">
       <div className="flex justify-between w-full gap-8">
         <h1 className="text-4xl font-bold text-black/80">Featured Products</h1>
         <p className="text-lg text-black/70 max-w-2xl">

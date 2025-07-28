@@ -129,34 +129,34 @@ export default function NavigationMenuDemo() {
                 </NavigationMenuLink>
               </li>
               <ul className="flex flex-col gap-1 justify-center items-center w-full">
-                <ListItem href="#home" title="Home" className="w-full" />
+                <ListItem href="/#home" title="Home" className="w-full" />
                 <ListItem
-                  href="#popular-products"
+                  href="/#popular-products"
                   title="Popular Products"
                   className="w-full"
                 />
                 <ListItem
-                  href="#featured-products"
+                  href="/#featured-products"
                   title="Featured Products"
                   className="w-full"
                 />
                 <ListItem
-                  href="#categories"
+                  href="/#categories"
                   title="Categories"
                   className="w-full"
                 />
                 <ListItem
-                  href="#value-proposition"
+                  href="/#value-proposition"
                   title="Value Propositions"
                   className="w-full"
                 />
                 <ListItem
-                  href="#latest-ongoings"
+                  href="/#latest-ongoings"
                   title="Latest Ongoings"
                   className="w-full"
                 />
                 <ListItem
-                  href="#faqs"
+                  href="/#faqs"
                   title="Frequently Asked Questions"
                   className="w-full"
                 />

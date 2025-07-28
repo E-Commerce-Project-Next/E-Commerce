@@ -3,7 +3,7 @@ import SearchInput from "@/features/commons/components/SearchInput";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-[100vh] flex flex-col items-center justify-center gap-10 text-center">
+    <section id="home" className="min-h-[100vh] flex flex-col items-center justify-center gap-10 text-center scroll-mt-30">
       <h1 className="text-4xl font-bold text-black max-w-2xl">
         Crafting Comfort, Redefining Spaces. Your Home, Your Signature Style!
       </h1>

@@ -14,7 +14,7 @@ export default function PopularProductsSection({
   const hasPopularProducts = popularProducts?.length > 0 && popularProducts;
 
   return (
-    <section id="popular-products" className="flex flex-col justify-center gap-9 w-full pt-25">
+    <section id="popular-products" className="flex flex-col justify-center gap-9 w-full scroll-mt-30">
       <SectionIntro
         title="Most Popular Products"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat. Nunc auctor consectetur elit, quis pulvina."

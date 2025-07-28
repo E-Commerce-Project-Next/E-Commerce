@@ -12,7 +12,7 @@ export default function LatestOngoingsSection({
 }: LatestOngoingsSectionProps) {
   const hasLatestOngoings = array?.length > 0 && array;
   return (
-    <section id="latest-ongoings" className="flex flex-col mx-auto justify-center gap-9 w-full pt-25">
+    <section id="latest-ongoings" className="flex flex-col mx-auto justify-center gap-9 w-full scroll-mt-30">
       <SectionIntro
         title="Latest Ongoing Projects"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat. Nunc auctor consectetur elit, quis pulvina."
