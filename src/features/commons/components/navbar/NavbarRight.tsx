@@ -55,7 +55,7 @@ export default function NavbarRight({ isLoggedIn = false }: NavbarRightProps) {
             ) : (
               <li className="flex flex-col gap-1">
                 <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
+                  <Link href="/login" className="flex-row items-center gap-2">
                     <LogInIcon color="black"/>
                     Log In
                   </Link>

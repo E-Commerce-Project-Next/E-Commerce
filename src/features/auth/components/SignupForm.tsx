@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { userForm } from "../types/userForm";
-import Divider from "@/features/commons/components/Divider";
 
 export const formSchema = z
   .object({
@@ -75,15 +74,15 @@ export default function SignupForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-8 justify-center"
+        className="flex flex-col gap-4 justify-center items-center"
       >
-        <div className="grid grid-cols-2 gap-x-4 gap-y-5">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-5 w-full">
           <FormField
             control={form.control}
             name="fullname"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>Full Name<span className="text-red-500">*</span></FormLabel>
                 <FormControl>
                   <Input
                     placeholder="John Doe"
@@ -105,7 +104,7 @@ export default function SignupForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Email<span className="text-red-500">*</span></FormLabel>
                 <FormControl>
                   <Input
                     placeholder="john.doe@example.com"
@@ -127,7 +126,7 @@ export default function SignupForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>Password<span className="text-red-500">*</span></FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Password"
@@ -150,7 +149,7 @@ export default function SignupForm() {
             name="confirmPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Confirm Password</FormLabel>
+                <FormLabel>Confirm Password<span className="text-red-500">*</span></FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Confirm Password"
@@ -168,8 +167,8 @@ export default function SignupForm() {
           />
         </div>
 
-        <Button type="submit" className="min-w-1/3 self-center">
-          Submit
+        <Button type="submit" className="w-full self-center">
+          Create Account
         </Button>
       </form>
     </Form>
