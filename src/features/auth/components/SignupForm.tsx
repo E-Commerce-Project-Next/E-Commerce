@@ -167,7 +167,7 @@ export default function SignupForm() {
           />
         </div>
 
-        <Button type="submit" className="w-full self-center">
+        <Button type="submit" className="w-full self-center hover:cursor-pointer">
           Create Account
         </Button>
       </form>

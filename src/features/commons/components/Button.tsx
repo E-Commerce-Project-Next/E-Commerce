@@ -1,12 +1,26 @@
-import React from "react";
 import Link from "next/link";
 
-export default function Button({children: text = "Click me", link= ""}) {
+export default function Button({
+  children: text = "Click me",
+  link = "",
+  onClick,
+}: {
+  children?: string;
+  link?: string;
+  onClick?: () => void;
+}) {
   return (
-    <button className="flex items-center fill-current gap-4 px-9 py-3 bg-black text-white rounded-3xl hover:bg-black/80 hover:cursor-pointer transition-colors">
-      <Link href={link}>
+    <button
+      onClick={onClick}
+      className="flex items-center fill-current gap-4 px-9 py-3 bg-black text-white rounded-3xl hover:bg-black/80 hover:cursor-pointer transition-colors"
+    >
+      {onClick ? (
         <span>{text}</span>
-      </Link>
+      ) : (
+        <Link href={link}>
+          <span>{text}</span>
+        </Link>
+      )}
       <svg
         width="10"
         height="16"

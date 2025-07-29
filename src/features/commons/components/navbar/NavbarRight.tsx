@@ -19,9 +19,9 @@ export default function NavbarRight({ isLoggedIn = false }: NavbarRightProps) {
       <NavigationMenuItem className="">
         <NavigationMenuTrigger>
           <svg
-            width="21"
-            height="20"
-            viewBox="0 0 21 20"
+            width="16"
+            height="16"
+            viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -73,11 +73,11 @@ export default function NavbarRight({ isLoggedIn = false }: NavbarRightProps) {
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink asChild>
-          <Link href="/contact-us" className="px-5">
+          <Link href="/cart" className="px-5">
             <svg
-              width="19"
+              width="20"
               height="20"
-              viewBox="0 0 19 20"
+              viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >

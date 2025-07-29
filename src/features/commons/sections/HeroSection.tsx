@@ -13,7 +13,10 @@ export default function HeroSection() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla
         nunc in molestie feugiat
       </p>
-      <SearchInput/>
+      <div className="w-sm">
+        <SearchInput />
+      </div>
+      
     </section>
   );
 }

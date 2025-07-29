@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchInput() {
   return (
-    <div className="flex border border-gray-300 rounded-full items-center justify-between px-5 py-3 max-w-sm w-full bg-white gap-3">
+    <div className="flex border border-gray-300 rounded-full items-center justify-between px-5 py-3 w-full bg-white gap-3">
       <input
         type="text"
         name="search"
