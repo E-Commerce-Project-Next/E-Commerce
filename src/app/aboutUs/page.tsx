@@ -7,10 +7,10 @@ import FaqSection from "@/features/faqs/sections/FaqSection";
 
 export default function page() {
   return (
-    <main className="flex flex-col gap-40 px-40 mb-30">
-      <div>
-        <h1>Get To Know Who We Are And What We Do - About Us</h1>
-        <p>
+    <main className="flex flex-col gap-20 px-40 mb-30">
+      <div className="flex flex-col items-center justify-center gap-5 pt-35 text-black">
+        <h1 className="text-4xl text-center font-bold max-w-2xl">Get To Know Who We Are And What We Do - About Us</h1>
+        <p className="text-lg text-gray-700 max-w-2xl text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
           fringilla nunc in molestie feugiat. Nunc auctor consectetur elit, quis
           pulvina. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
