@@ -4,15 +4,25 @@ export default function Button({
   children: text = "Click me",
   link = "",
   onClick,
+  className = "",
+  variant = "filled",
+  arrowRight = true,
 }: {
   children?: string;
   link?: string;
   onClick?: () => void;
+  className?: string;
+  variant?: "outline" | "filled";
+  arrowRight?: boolean;
 }) {
   return (
     <button
       onClick={onClick}
-      className="flex items-center fill-current gap-4 px-9 py-3 bg-black text-white rounded-3xl hover:bg-black/80 hover:cursor-pointer transition-colors"
+      className={`flex items-center fill-current gap-4 px-9 py-3 rounded-3xl hover:cursor-pointer transition-colors ${className} ${
+        variant === "outline"
+          ? "border border-black text-black bg-transparent hover:bg-black hover:text-white"
+          : "bg-black text-white hover:bg-black/90 hover:text-white"
+      }`}
     >
       {onClick ? (
         <span>{text}</span>
@@ -21,6 +31,7 @@ export default function Button({
           <span>{text}</span>
         </Link>
       )}
+      {arrowRight && (
       <svg
         width="10"
         height="16"
@@ -35,6 +46,7 @@ export default function Button({
           fill="current"
         />
       </svg>
+    )}
     </button>
   );
 }

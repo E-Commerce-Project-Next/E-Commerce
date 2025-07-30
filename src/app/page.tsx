@@ -38,6 +38,7 @@ export default async function Home() {
               imageUrl={product.images[0]?.url}
               altText={product.images[0]?.altText || "Product Image"}
               id={product.id}
+              isHome={true}
             />
           ))
         ) : (
@@ -56,6 +57,7 @@ export default async function Home() {
                 imageUrl={product.images[0]?.url}
                 altText={product.images[0]?.altText || "Product Image"}
                 id={product.id}
+                isHome={true}
               />
             ))
         ) : (

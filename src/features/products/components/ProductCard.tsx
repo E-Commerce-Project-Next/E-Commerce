@@ -12,6 +12,7 @@ type ProductCardProps = {
   imageUrl?: string; 
   altText?: string; // Optional alt text for the image
   id?: string;
+  isHome?: boolean;
 };
 
 const MotionImage = motion(Image);
@@ -23,25 +24,32 @@ export default function ProductCard({
   imageUrl,
   altText = "Product Image", // Default alt text if not provided
   id,
+  isHome
 }: ProductCardProps) {
   const newPrice: number = discount!=0 ? parseFloat((price * (1 - (discount / 100))).toFixed(2)) : parseFloat(price.toFixed(2));
-  const oldPrice: number = parseFloat(price.toFixed(2));
   const discountPercentage: number = parseFloat(discount.toFixed(1));
   const imageSrc = imageUrl || "/no_image.jpg";
   const discountBoolean = discount!=0 ? true : false;
-  const layoutId = "image-"+`${id}`;
+  const layoutId = {
+    id: `image-${id}`,
+    productId: `product-${id}`
+  }
 
   return (
     <article className="flex flex-col relative w-[286px] h-[432px] gap-3 rounded-xl">
       {discountBoolean && <span className="absolute top-4 left-3 py-1 px-2 rounded-lg z-10 bg-black/70 text-white text-xs">-{discountPercentage}%</span>}
       <Link className="relative w-full h-[360px]" href={`/products/${id}`}>
-        <MotionImage src={imageSrc} alt={altText} fill className="rounded-xl" layoutId={layoutId}/>
+        {isHome ? (
+          <Image src={imageSrc} alt={altText} fill className="rounded-xl" />
+        ) : (
+          <MotionImage src={imageSrc} alt={altText} fill className="rounded-xl" layoutId={layoutId.id} />
+        )}
       </Link>
       <div>
-        <h3 className="block text-lg text-black/80 text-center">{title}</h3>
+        <motion.h3 className="block text-lg text-black/80 text-center" layoutId={layoutId.productId}>{title}</motion.h3>
         <div className="flex justify-between px-4 py-2 gap-3">
           <div className="flex gap-2">
-            {discountBoolean && <span className="line-through text-black/60">${oldPrice}</span>}
+            {discountBoolean && <span className="line-through text-black/60">${price}</span>}
             <span>${newPrice}</span>
           </div>
           <button>

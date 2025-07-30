@@ -29,3 +29,12 @@ export async function getProducts(
 
   return response.json();
 }
+
+export async function getProductById(id: string): Promise<Product> {
+  const url = new URL(`${process.env.NEXT_PUBLIC_API_URL}/products/${id}`);
+  const response = await fetch(url.toString());
+  if (!response.ok) {
+    throw new Error("Failed to fetch product");
+  }
+  return response.json();
+}
