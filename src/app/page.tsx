@@ -7,7 +7,7 @@ import FaqSection from "@/features/faqs/sections/FaqSection";
 import { getProducts } from "@/features/products/services/ProductService";
 import CategorySection from "@/features/categories/sections/CategorySection";
 import ProductCard from "@/features/products/components/ProductCard";
-import NotFoundProducts from "@/features/blogs/components/NotFoundBlogs";
+import NotFoundProducts from "@/features/products/components/NotFoundProducts";
 import type { Product } from "@/features/products/types/productType";
 
 export default async function Home() {
@@ -20,12 +20,15 @@ export default async function Home() {
 
   const featuredProducts = (await getProducts()).slice(0, 4);
 
+  const hasPopularProducts: boolean = popularProducts.length > 0;
+  const hasFeaturedProducts: boolean = popularProducts.length > 0;
+
   return (
     <main className="flex flex-col gap-40 px-40 mb-30">
       <HeroSection />
 
       <PopularProductsSection>
-        {popularProducts ? (
+        {hasPopularProducts ? (
           popularProducts.map((product: Product) => (
             <ProductCard
               key={product.id}
@@ -34,6 +37,7 @@ export default async function Home() {
               discount={product.discountValue}
               imageUrl={product.images[0]?.url}
               altText={product.images[0]?.altText || "Product Image"}
+              id={product.id}
             />
           ))
         ) : (
@@ -42,7 +46,7 @@ export default async function Home() {
       </PopularProductsSection>
 
       <FeaturedProductsSection>
-        {featuredProducts ? (
+        {hasFeaturedProducts ? (
             featuredProducts.map((product: Product) => (
               <ProductCard
                 key={product.id}
@@ -51,6 +55,7 @@ export default async function Home() {
                 discount={product.discountValue}
                 imageUrl={product.images[0]?.url}
                 altText={product.images[0]?.altText || "Product Image"}
+                id={product.id}
               />
             ))
         ) : (

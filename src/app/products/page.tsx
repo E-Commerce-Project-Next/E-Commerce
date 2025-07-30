@@ -12,6 +12,8 @@ import PaginationTop from "@/features/products/components/PaginationTop";
 
 export default async function Page() {
   const products: Product[] = await getProducts();
+  
+  const productsQuantity = products ? ProductsSection.length : 0;
 
   return (
     <main className="py-30 min-h-[calc(100vh-128px)] flex px-8">
@@ -21,10 +23,11 @@ export default async function Page() {
         <SearchInput />
         <PaginationProduct>
           <div className="flex items-center w-full">
-            <PaginationTop range={[0,4]} total={products.length} />
+            <PaginationTop range={[0, 4]} total={productsQuantity} />
           </div>
           <p className="w-full text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </PaginationProduct>
         <GridProducts>
@@ -36,11 +39,12 @@ export default async function Page() {
               discount={product.discountValue}
               imageUrl={product.images[0]?.url}
               altText={product.images[0]?.altText || "Product Image"}
+              id={product.id}
             />
           ))}
         </GridProducts>
         <PaginationProduct>
-          <PaginationTop range={[0,4]} total={products.length} />
+          <PaginationTop range={[0, 4]} total={productsQuantity} />
           <Button>
             Load More
           </Button>
