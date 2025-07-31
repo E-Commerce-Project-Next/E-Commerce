@@ -12,6 +12,7 @@ export interface Product {
   discountEnd: string;   // ISO format (Date string)
   isFeatured: boolean;
   salesCount: number;
+  rating: number;
 }
 
 export interface ProductImage {
